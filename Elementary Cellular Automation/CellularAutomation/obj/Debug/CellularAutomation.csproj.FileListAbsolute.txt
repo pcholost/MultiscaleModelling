@@ -1,0 +1,10 @@
+D:\HalaMek\MatLab\C#\Elementary Cellular Automation\CellularAutomation\CellularAutomation\bin\Debug\CellularAutomation.exe.config
+D:\HalaMek\MatLab\C#\Elementary Cellular Automation\CellularAutomation\CellularAutomation\bin\Debug\CellularAutomation.exe
+D:\HalaMek\MatLab\C#\Elementary Cellular Automation\CellularAutomation\CellularAutomation\bin\Debug\CellularAutomation.pdb
+D:\HalaMek\MatLab\C#\Elementary Cellular Automation\CellularAutomation\CellularAutomation\obj\Debug\CellularAutomation.csprojResolveAssemblyReference.cache
+D:\HalaMek\MatLab\C#\Elementary Cellular Automation\CellularAutomation\CellularAutomation\obj\Debug\CellularAutomation.Form1.resources
+D:\HalaMek\MatLab\C#\Elementary Cellular Automation\CellularAutomation\CellularAutomation\obj\Debug\CellularAutomation.Properties.Resources.resources
+D:\HalaMek\MatLab\C#\Elementary Cellular Automation\CellularAutomation\CellularAutomation\obj\Debug\CellularAutomation.csproj.GenerateResource.Cache
+D:\HalaMek\MatLab\C#\Elementary Cellular Automation\CellularAutomation\CellularAutomation\obj\Debug\CellularAutomation.csproj.CoreCompileInputs.cache
+D:\HalaMek\MatLab\C#\Elementary Cellular Automation\CellularAutomation\CellularAutomation\obj\Debug\CellularAutomation.exe
+D:\HalaMek\MatLab\C#\Elementary Cellular Automation\CellularAutomation\CellularAutomation\obj\Debug\CellularAutomation.pdb
