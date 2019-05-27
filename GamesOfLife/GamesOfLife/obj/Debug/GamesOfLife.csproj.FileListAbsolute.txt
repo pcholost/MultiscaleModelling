@@ -1,0 +1,10 @@
+D:\HalaMek\MatLab\C#\GamesOfLife\GamesOfLife\bin\Debug\GamesOfLife.exe.config
+D:\HalaMek\MatLab\C#\GamesOfLife\GamesOfLife\bin\Debug\GamesOfLife.exe
+D:\HalaMek\MatLab\C#\GamesOfLife\GamesOfLife\bin\Debug\GamesOfLife.pdb
+D:\HalaMek\MatLab\C#\GamesOfLife\GamesOfLife\obj\Debug\GamesOfLife.csprojResolveAssemblyReference.cache
+D:\HalaMek\MatLab\C#\GamesOfLife\GamesOfLife\obj\Debug\GamesOfLife.Form1.resources
+D:\HalaMek\MatLab\C#\GamesOfLife\GamesOfLife\obj\Debug\GamesOfLife.Properties.Resources.resources
+D:\HalaMek\MatLab\C#\GamesOfLife\GamesOfLife\obj\Debug\GamesOfLife.csproj.GenerateResource.Cache
+D:\HalaMek\MatLab\C#\GamesOfLife\GamesOfLife\obj\Debug\GamesOfLife.csproj.CoreCompileInputs.cache
+D:\HalaMek\MatLab\C#\GamesOfLife\GamesOfLife\obj\Debug\GamesOfLife.exe
+D:\HalaMek\MatLab\C#\GamesOfLife\GamesOfLife\obj\Debug\GamesOfLife.pdb
