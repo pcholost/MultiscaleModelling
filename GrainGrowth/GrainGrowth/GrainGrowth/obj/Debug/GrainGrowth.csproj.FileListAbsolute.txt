@@ -1,0 +1,10 @@
+D:\HalaMek\MatLab\C#\GrainGrowth\GrainGrowth\GrainGrowth\bin\Debug\GrainGrowth.exe.config
+D:\HalaMek\MatLab\C#\GrainGrowth\GrainGrowth\GrainGrowth\bin\Debug\GrainGrowth.exe
+D:\HalaMek\MatLab\C#\GrainGrowth\GrainGrowth\GrainGrowth\bin\Debug\GrainGrowth.pdb
+D:\HalaMek\MatLab\C#\GrainGrowth\GrainGrowth\GrainGrowth\obj\Debug\GrainGrowth.csprojResolveAssemblyReference.cache
+D:\HalaMek\MatLab\C#\GrainGrowth\GrainGrowth\GrainGrowth\obj\Debug\GrainGrowth.Form1.resources
+D:\HalaMek\MatLab\C#\GrainGrowth\GrainGrowth\GrainGrowth\obj\Debug\GrainGrowth.Properties.Resources.resources
+D:\HalaMek\MatLab\C#\GrainGrowth\GrainGrowth\GrainGrowth\obj\Debug\GrainGrowth.csproj.GenerateResource.Cache
+D:\HalaMek\MatLab\C#\GrainGrowth\GrainGrowth\GrainGrowth\obj\Debug\GrainGrowth.csproj.CoreCompileInputs.cache
+D:\HalaMek\MatLab\C#\GrainGrowth\GrainGrowth\GrainGrowth\obj\Debug\GrainGrowth.exe
+D:\HalaMek\MatLab\C#\GrainGrowth\GrainGrowth\GrainGrowth\obj\Debug\GrainGrowth.pdb
