@@ -67,7 +67,7 @@ namespace GrainGrowth.src
                         i * data.CellSize,
                         data.CellSize,
                         data.CellSize);
-                    graphics.FillRectangle(new SolidBrush(Color.FromArgb(255 / data.MaxEnergy * data.GridEnergy[i, j], 0, 0)), rect);
+                    graphics.FillRectangle(new SolidBrush(Color.FromArgb(0, 0, 255 / data.MaxEnergy * data.GridEnergy[i, j])), rect);
                 }
             }
 

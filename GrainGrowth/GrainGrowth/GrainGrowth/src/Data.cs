@@ -21,6 +21,7 @@ namespace GrainGrowth.src
         private List<int> cells;
         private int[,] gridValues;
         private Point[,] gridPoints;
+        private List<Point> randomPoints;
 
         private Random random;
 
@@ -38,6 +39,17 @@ namespace GrainGrowth.src
         private bool showEnergy;
         private int maxEnergy = 1;
 
+        //
+        private double a;
+        private double b;
+        private double deltaRo;
+        private double dislocation;
+        private double criticalDislocation;
+        private double temperature;
+        private double strainRate;
+        private double sigma;
+        //
+
         //gettery i settery
         public int SizeX { get => sizeX; set => sizeX = value; }
         public int SizeY { get => sizeY; set => sizeY = value; }
@@ -50,6 +62,7 @@ namespace GrainGrowth.src
         public List<Brush> Colors { get => colors; set => colors = value; }
         public int[,] GridValues { get => gridValues; set => gridValues = value; }
         public Point[,] GridPoints { get => gridPoints; set => gridPoints = value; }
+        public List<Point> RandomPoints { get => randomPoints; set => randomPoints = value; }
 
         public int RandomNum { get => randomNum; set => randomNum = value; }
         public int XHomogenousNum { get => xHomogenousNum; set => xHomogenousNum = value; }
@@ -64,13 +77,28 @@ namespace GrainGrowth.src
         public bool ShowEnergy { get => showEnergy; set => showEnergy = value; }
         public int MaxEnergy { get => maxEnergy; set => maxEnergy = value; }
 
+        //
+        public double DeltaRo { get => deltaRo; set => deltaRo = value; }
+        public double Dislocation { get => dislocation; set => dislocation = value; }
+        public double CriticalDislocation { get => criticalDislocation; set => criticalDislocation = value; }
+        public double A { get => a; set => a = value; }
+        public double B { get => b; set => b = value; }
+        public double StrainRate { get => strainRate; set => strainRate = value; }
+        public double Temperature { get => temperature; set => temperature = value; }
+        public double Sigma { get => sigma; set => sigma = value; }
+        //
         public Data()
         {
             random = new Random();
 
             isPeriodic = false;
             currentIndex = 0;
-            CellSize = 4;
+            CellSize = 10;
+            A = 86710969050178.5;
+            B = 9.41268203527779;
+            Temperature = 900;
+            StrainRate = 1;
+            CriticalDislocation = 46842668.25;
         }
 
         public void Initialize()

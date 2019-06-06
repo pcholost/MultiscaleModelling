@@ -18,6 +18,8 @@ namespace GrainGrowth
         private Execute execute;
         private Data data;
         private Neighbor neighbor;
+        private MonteCarlo monteCarlo;
+
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +27,8 @@ namespace GrainGrowth
             data = new Data();
             display = new Display(pictureBox, data);
             execute = new Execute(display, data);
-            neighbor = new Neighbor(data, execute);
+            neighbor = new Neighbor(data, execute, display);
+            monteCarlo = new MonteCarlo(display, data);
 
             Set_Limits();
         }
@@ -41,7 +44,7 @@ namespace GrainGrowth
             sizeYUpDown.Maximum = pictureBox.Height / data.CellSize;
             sizeYUpDown.Value = sizeYUpDown.Maximum;
 
-            speedUpDown.Minimum = 0;
+            speedUpDown.Minimum = 1;
             speedUpDown.Maximum = 100;
 
             randomNumUpDown.Minimum = 1;
@@ -60,12 +63,10 @@ namespace GrainGrowth
 
             radiousNumUpDown.Minimum = 1;
             radiousNumUpDown.Value = 5;
-            radiousNumUpDown.Maximum = 20; 
+            radiousNumUpDown.Maximum = 20;
 
-            neighborhoodUpDown.Minimum = 1;
-
-            
-
+            ktUpDown.Minimum = -6;
+            ktUpDown.DecimalPlaces = 1;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -115,6 +116,7 @@ namespace GrainGrowth
 
         private void SingleStep_Click(object sender, EventArgs e)
         {
+            data.Kt = decimal.ToInt32(ktUpDown.Value);
             neighbor.OwnNeighbor();
         }
 
@@ -139,6 +141,7 @@ namespace GrainGrowth
 
         private void Random_Click(object sender, EventArgs e)
         {
+            data.Kt = decimal.ToInt32(ktUpDown.Value);
             neighbor.RandomNeighbor();
         }
 
@@ -157,7 +160,7 @@ namespace GrainGrowth
             MouseEventArgs me = (MouseEventArgs)e;
             Point coords = me.Location;
 
-            neighbor.OwnNeighborClick(coords, display);
+            neighbor.OwnNeighborClick(coords);
         }
 
         private void neighborhoodUpDown_ValueChanged(object sender, EventArgs e)
@@ -197,22 +200,9 @@ namespace GrainGrowth
             }
         }
 
-        private void ktUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            data.Kt = decimal.ToDouble(ktUpDown.Value);
-            if (data.Kt == 0)
-                data.Kt = -6;
-        }
-
-        private void MCButton_Click(object sender, EventArgs e)
-        {
-            data.Kt = decimal.ToInt32(ktUpDown.Value);
-            //neighbor itd
-        }
-
         private void MCStep_Click(object sender, EventArgs e)
         {
-
+            monteCarlo.NextStep();
         }
 
         private void showEnergyBox_CheckedChanged(object sender, EventArgs e)
@@ -231,6 +221,19 @@ namespace GrainGrowth
                 if (data.GridEnergy != null)
                     display.PrintCells();
             }
+        }
+
+        private void generateProximityBtn_Click(object sender, EventArgs e)
+        {
+            data.Kt = decimal.ToInt32(ktUpDown.Value);
+            neighbor.GenerateProximity();
+        }
+
+        private void ktUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            data.Kt = decimal.ToDouble(ktUpDown.Value);
+            if (data.Kt == 0.0)
+                data.Kt = -6;
         }
     }
 }

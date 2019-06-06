@@ -15,14 +15,16 @@ namespace GrainGrowth.src
     {
         private Data data;
         private Execute execute;
+        private Display display;
 
-        public Neighbor(Data data, Execute execute)
+        public Neighbor(Data data, Execute execute, Display display)
         {
             this.data = data;
             this.execute = execute;
+            this.display = display;
         }
 
-        public void OwnNeighborClick(Point coords, Display display)
+        public void OwnNeighborClick(Point coords)
         {
             int x = coords.X / data.CellSize;
             int y = coords.Y / data.CellSize;
@@ -43,7 +45,11 @@ namespace GrainGrowth.src
                 data.GridValues[y, x] = ++data.CurrentIndex; ;
                 data.AddNewColor();
             }
-            display.PrintCells();
+
+            if (!data.ShowEnergy)
+                display.PrintCells();
+            else
+                display.PrintEnergy();
         }
 
         public void OwnNeighbor()
@@ -63,7 +69,10 @@ namespace GrainGrowth.src
                 data.AddNewColor();
                 data.GridValues[random.Next(0, data.SizeY), random.Next(0, data.SizeX)] = ++data.CurrentIndex;
             }
-            execute.Calculate();
+            if (!data.ShowEnergy)
+                display.PrintCells();
+            else
+                display.PrintEnergy();
         }
 
         public void HomogenousNeighbor()
@@ -81,10 +90,10 @@ namespace GrainGrowth.src
                     data.GridValues[i * ySpace, j * xSpace] = ++data.CurrentIndex;
                 }
             }
-            if(data.CurrentIndex>1)
-            {
-                execute.Calculate();
-            }
+            if (!data.ShowEnergy)
+                display.PrintCells();
+            else
+                display.PrintEnergy();
         }
 
         public void RadiousNeighbor()
@@ -114,10 +123,10 @@ namespace GrainGrowth.src
                 }
             }
 
-            if(data.CurrentIndex > 1)
-            {
-                execute.Calculate();
-            }
+            if (!data.ShowEnergy)
+                display.PrintCells();
+            else
+                display.PrintEnergy();
         }
 
         private bool checkRadious(int x, int y)
@@ -139,6 +148,24 @@ namespace GrainGrowth.src
             }
 
             return true;
+        }
+
+        public void GenerateProximity()
+        {
+            data.Initialize();
+
+            for(int i=0; i<data.SizeY;i++)
+            {
+                for(int j=0; j<data.SizeX; j++)
+                {
+                    data.AddNewColor();
+                    data.GridValues[i, j] = ++data.CurrentIndex;
+                }
+            }
+            if (!data.ShowEnergy)
+                display.PrintCells();
+            else
+                display.PrintEnergy();
         }
     }
 }

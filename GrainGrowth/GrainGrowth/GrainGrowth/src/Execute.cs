@@ -22,12 +22,9 @@ namespace GrainGrowth.src
 
         public void Calculate()
         {
-            display.PrintCells();
-
             for (int i = 0; i < data.Speed; i++)
             {
                 int[,] nextStepGrid = new int[data.SizeX, data.SizeX];
-
                 for (int y = 0; y < data.SizeY; y++)
                 {
                     for (int x = 0; x < data.SizeX; x++)
@@ -77,7 +74,11 @@ namespace GrainGrowth.src
                     }
                 }
                 data.GridValues = nextStepGrid;
-                display.PrintCells();
+
+                if (!data.ShowEnergy)
+                    display.PrintCells();
+                else
+                    display.PrintEnergy();
 
             }
         }

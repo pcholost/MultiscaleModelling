@@ -59,11 +59,11 @@
             this.submitNeighbor = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.MCButton = new System.Windows.Forms.Button();
             this.showEnergyBox = new System.Windows.Forms.CheckBox();
-            this.ktUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
             this.MCStep = new System.Windows.Forms.Button();
+            this.generateProximityBtn = new System.Windows.Forms.Button();
+            this.ktUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Kt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sizeXUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sizeYUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speedUpDown)).BeginInit();
@@ -190,9 +190,9 @@
             // 
             // SingleStep
             // 
-            this.SingleStep.Location = new System.Drawing.Point(499, 496);
+            this.SingleStep.Location = new System.Drawing.Point(817, 491);
             this.SingleStep.Name = "SingleStep";
-            this.SingleStep.Size = new System.Drawing.Size(80, 23);
+            this.SingleStep.Size = new System.Drawing.Size(75, 23);
             this.SingleStep.TabIndex = 17;
             this.SingleStep.Text = "Single Step";
             this.SingleStep.UseVisualStyleBackColor = true;
@@ -253,9 +253,9 @@
             // 
             // ClearAll
             // 
-            this.ClearAll.Location = new System.Drawing.Point(499, 467);
+            this.ClearAll.Location = new System.Drawing.Point(817, 520);
             this.ClearAll.Name = "ClearAll";
-            this.ClearAll.Size = new System.Drawing.Size(80, 23);
+            this.ClearAll.Size = new System.Drawing.Size(75, 23);
             this.ClearAll.TabIndex = 24;
             this.ClearAll.Text = "Clear All";
             this.ClearAll.UseVisualStyleBackColor = true;
@@ -355,26 +355,16 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(827, 396);
+            this.label12.Location = new System.Drawing.Point(818, 347);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(61, 13);
             this.label12.TabIndex = 33;
             this.label12.Text = "MonteCarlo";
             // 
-            // MCButton
-            // 
-            this.MCButton.Location = new System.Drawing.Point(817, 412);
-            this.MCButton.Name = "MCButton";
-            this.MCButton.Size = new System.Drawing.Size(75, 23);
-            this.MCButton.TabIndex = 34;
-            this.MCButton.Text = "MC";
-            this.MCButton.UseVisualStyleBackColor = true;
-            this.MCButton.Click += new System.EventHandler(this.MCButton_Click);
-            // 
             // showEnergyBox
             // 
             this.showEnergyBox.AutoSize = true;
-            this.showEnergyBox.Location = new System.Drawing.Point(817, 451);
+            this.showEnergyBox.Location = new System.Drawing.Point(812, 403);
             this.showEnergyBox.Name = "showEnergyBox";
             this.showEnergyBox.Size = new System.Drawing.Size(84, 17);
             this.showEnergyBox.TabIndex = 35;
@@ -382,43 +372,53 @@
             this.showEnergyBox.UseVisualStyleBackColor = true;
             this.showEnergyBox.CheckedChanged += new System.EventHandler(this.showEnergyBox_CheckedChanged);
             // 
-            // ktUpDown
-            // 
-            this.ktUpDown.Location = new System.Drawing.Point(826, 474);
-            this.ktUpDown.Name = "ktUpDown";
-            this.ktUpDown.Size = new System.Drawing.Size(75, 20);
-            this.ktUpDown.TabIndex = 36;
-            this.ktUpDown.ValueChanged += new System.EventHandler(this.ktUpDown_ValueChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(805, 476);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(19, 13);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "kt:";
-            // 
             // MCStep
             // 
-            this.MCStep.Location = new System.Drawing.Point(817, 500);
+            this.MCStep.Location = new System.Drawing.Point(817, 460);
             this.MCStep.Name = "MCStep";
-            this.MCStep.Size = new System.Drawing.Size(75, 23);
+            this.MCStep.Size = new System.Drawing.Size(75, 25);
             this.MCStep.TabIndex = 38;
             this.MCStep.Text = "MCStep";
             this.MCStep.UseVisualStyleBackColor = true;
             this.MCStep.Click += new System.EventHandler(this.MCStep_Click);
+            // 
+            // generateProximityBtn
+            // 
+            this.generateProximityBtn.Location = new System.Drawing.Point(817, 374);
+            this.generateProximityBtn.Name = "generateProximityBtn";
+            this.generateProximityBtn.Size = new System.Drawing.Size(75, 23);
+            this.generateProximityBtn.TabIndex = 39;
+            this.generateProximityBtn.Text = "Generate";
+            this.generateProximityBtn.UseVisualStyleBackColor = true;
+            this.generateProximityBtn.Click += new System.EventHandler(this.generateProximityBtn_Click);
+            // 
+            // ktUpDown
+            // 
+            this.ktUpDown.Location = new System.Drawing.Point(831, 426);
+            this.ktUpDown.Name = "ktUpDown";
+            this.ktUpDown.Size = new System.Drawing.Size(83, 20);
+            this.ktUpDown.TabIndex = 40;
+            this.ktUpDown.ValueChanged += new System.EventHandler(this.ktUpDown_ValueChanged);
+            // 
+            // Kt
+            // 
+            this.Kt.AutoSize = true;
+            this.Kt.Location = new System.Drawing.Point(809, 428);
+            this.Kt.Name = "Kt";
+            this.Kt.Size = new System.Drawing.Size(17, 13);
+            this.Kt.TabIndex = 41;
+            this.Kt.Text = "Kt";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(931, 559);
-            this.Controls.Add(this.MCStep);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.Kt);
             this.Controls.Add(this.ktUpDown);
+            this.Controls.Add(this.generateProximityBtn);
+            this.Controls.Add(this.MCStep);
             this.Controls.Add(this.showEnergyBox);
-            this.Controls.Add(this.MCButton);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.submitNeighbor);
             this.Controls.Add(this.neighborhoodUpDown);
@@ -501,11 +501,11 @@
         private System.Windows.Forms.Button submitNeighbor;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button MCButton;
         private System.Windows.Forms.CheckBox showEnergyBox;
-        private System.Windows.Forms.NumericUpDown ktUpDown;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button MCStep;
+        private System.Windows.Forms.Button generateProximityBtn;
+        private System.Windows.Forms.NumericUpDown ktUpDown;
+        private System.Windows.Forms.Label Kt;
     }
 }
 
